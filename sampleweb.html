@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    h4 {
+      padding: 10px;
+          margin: 0px;
+    }
+
+    .btn-primary {
+      background-color: #fed136;
+      border-color: #fed136;
+    }
+
+    .jumbotron {
+      background-image: url("header-bg.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: aliceblue;
+      padding-bottom: 162 px; 
+    }
+    .customNav{
+      background-color: transparent !important;
+      border: none;
+    }
+    .img-fluid{
+      width: 100px;
+      border-radius: 25px;
+    }
+    .intro{
+      height:50%;
+      padding-top: 150px;
+    }
+    h1 {
+margin-left: 70px;
+}
+form li {
+list-style: none;
+margin-bottom: 5px;
+}
+
+form ul li label{
+float: left;
+clear: left;
+width: 100px;
+text-align: right;
+margin-right: 10px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:14px;
+}
+
+form ul li input, select, span {
+float: left;
+margin-bottom: 10px;
+}
+
+form textarea {
+float: left;
+width: 350px;
+height: 150px;
+}
+
+[type="submit"] {
+clear: left;
+margin: 20px 0 0 230px;
+font-size:18px
+}
+
+p {
+margin-left: 70px;
+font-weight: bold;
+}
+  </style>
+</head>
+
+<body style="height:1500px">
+  <div class="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top customNav">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#" style="color: #fed136;font:italic;">Start Bootstrap</a>
+        </div>
+        <ul class="nav navbar-nav" style="float:right">
+          <li>
+            <a href="#">Service</a>
+          </li>
+          <li>
+            <a href="#">Portfolio</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Team</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="jumbotron text-center intro">
+    <h4 style="font-size: 40px;">Welcome To Our Studio!</h4>
+    <h2>IT'S NICE TO MEET YOU</h2>
+
+    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+  </div>
+
+  <div class="service">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Services</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          </div>
+    </div>
+
+    <div class="row-center">
+        <div class="row text-center">
+            <div class="col-md-4">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+              </span>
+              <img class="img-fluid" src="header-bg.jpg" alt="">
+              <h4 class="service-heading">E-Commerce</h4>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+            <div class="col-md-4">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+              </span>
+              <img class="img-fluid" src="header-bg.jpg" alt="">
+              <h4 class="service-heading">Responsive Design</h4>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+            <div class="col-md-4">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+              </span>
+              <img class="img-fluid" src="header-bg.jpg" alt="">
+              <h4 class="service-heading">Web Security</h4>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+          </div>
+    </div>
+  </div>
+
+<div class="portfolio">
+  <div class="col-lg-12 text-center">
+    <h2 class="section-heading text-uppercase">Portfolio</h2>
+    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 col-sm-6 portfolio-item">
+      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content">
+            <i class="fas fa-plus fa-3x"></i>
+          </div>
+        </div>
+        <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+      </a>
+      <div class="portfolio-caption">
+        <h4>Threads</h4>
+        <p class="text-muted">Illustration</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 portfolio-item">
+      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content">
+            <i class="fas fa-plus fa-3x"></i>
+          </div>
+        </div>
+        <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+      </a>
+      <div class="portfolio-caption">
+        <h4>Explore</h4>
+        <p class="text-muted">Graphic Design</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 portfolio-item">
+      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content">
+            <i class="fas fa-plus fa-3x"></i>
+          </div>
+        </div>
+        <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+      </a>
+      <div class="portfolio-caption">
+        <h4>Finish</h4>
+        <p class="text-muted">Identity</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 portfolio-item">
+      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content">
+            <i class="fas fa-plus fa-3x"></i>
+          </div>
+        </div>
+        <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
+      </a>
+      <div class="portfolio-caption">
+        <h4>Lines</h4>
+        <p class="text-muted">Branding</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 portfolio-item">
+      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content">
+            <i class="fas fa-plus fa-3x"></i>
+          </div>
+        </div>
+        <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+      </a>
+      <div class="portfolio-caption">
+        <h4>Southwest</h4>
+        <p class="text-muted">Website Design</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 portfolio-item">
+      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content">
+            <i class="fas fa-plus fa-3x"></i>
+          </div>
+        </div>
+        <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+      </a>
+      <div class="portfolio-caption">
+        <h4>Window</h4>
+        <p class="text-muted">Photography</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="team">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+      </div>
+      
+      
+<div class="row">
+  <div class="col-sm-4">
+      <img src="header-bg.jpg" class="img-circle" alt="Cinque Terre" width="180" height="200">
+      <h5>Kay Garland</h5>
+</div> 
+<div class="col-sm-4">
+    <img src="header-bg.jpg" class="img-circle" alt="Cinque Terre" width="180" height="200">
+    <h5>Kay Garland</h5>
+  </div>      
+
+  <div class="col-sm-4">
+      <img src="header-bg.jpg" class="img-circle" alt="Cinque Terre" width="180" height="200">
+      <h5>Kay Garland</h5>
+    </div>      
+    
+
+</div>
+
+<div class="Registration">
+    <form name='registration' onSubmit="return formValidation();">
+            <ul>
+           
+            
+            <li><label for="username">Name:</label></li>
+            <li><input type="text" name="username" size="50" /></li>
+            
+            
+            <li><label for="email">Email:</label></li>
+            <li><input type="text" name="email" size="50" /></li>
+            <li><label id="gender">Sex:</label></li>
+            <li><input type="radio" name="msex" value="Male" /><span>Male</span></li>
+            <li><input type="radio" name="fsex" value="Female" /><span>Female</span></li>
+           
+            <li><input type="submit" name="submit" value="Submit" /></li>
+            </ul>
+            </form>
+
+</div>
+</body>
+
+</html>

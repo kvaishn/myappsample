@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Application</title>
+    <style>
+        form {
+            width: 30%;
+            height: 400px;
+            padding: 23px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            resize: none;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        input[type=submit] {
+            padding: 5px 15px;
+            background: rgba(51, 138, 219, 0.938);
+            border: 0 none;
+            cursor: pointer;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            color: white;
+
+        }
+
+        input[type=text],
+        input[type=number] {
+
+            padding: 7px 2px 7px 2px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+    </style>
+
+    
+</head>
+
+<body>
+    <div class="row">
+        <form name="myForm" onsubmit="return validateForm()">
+            <input type="text" id="firstname" placeholder="Name">
+            <br>
+            <br>
+            <input type="number" name="age" id="age" placeholder="Age">
+            <br>
+            <br> Sex:
+            <input type="radio" name="gender" value="male" checked> Male
+            <input type="radio" name="gender" value="female"> Female
+            <br>
+            <br>
+            <input type="text" id="phonenumber" placeholder="Phone Number">
+            <!-- <input type="email" value="Email"> -->
+            <br>
+            <br>
+            <input type="file" name="pic" id="inp" accept="image/*">
+            <p id="b64"></p>
+            <img id="img" src="#"  height="50">
+            
+            <br>
+            <br>
+            <input type="submit">
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var name = document.forms["myForm"]["firstname"].value;
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            var age = document.forms["myForm"]["age"].value;
+            if (age == "") {
+                alert("Age must be filled out");
+                return false;
+            }
+            var phonenumber = document.forms["myForm"]["phonenumber"].value;
+            if (phonenumber == "") {
+                alert("Phone Number must be filled out");
+                return false;
+            }
+
+
+        }
+        function readFile() {
+
+            if (this.files && this.files[0]) {
+
+                var FR = new FileReader();
+
+                FR.addEventListener("load", function (e) {
+                    document.getElementById("img").src       = e.target.result;
+                    document.getElementById("b64").innerHTML = e.target.result;
+                });
+
+                FR.readAsDataURL(this.files[0]);
+            }
+
+        }
+
+        document.getElementById("inp").addEventListener("change", readFile);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
